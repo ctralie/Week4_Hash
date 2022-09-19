@@ -1,3 +1,5 @@
+from hashtable import *
+
 class Wizard:
     def __init__(self, name, month, day, year):
         self.name = name
@@ -30,6 +32,8 @@ def get_all_wizards():
 
 
 if __name__ == '__main__':
+    table = HashTable(10)
     wizards = get_all_wizards()
     for w in wizards:
-        print(w, w.hash_code())
+        table.add(w)
+    print(table)
